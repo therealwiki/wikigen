@@ -87,7 +87,7 @@ export const platformPreviews = {
       <div class="bg-white rounded-lg shadow-sm p-3">
         <div class="bg-blue-100 rounded mb-2 h-16 flex items-center justify-center">
           <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
           </svg>
         </div>
         <div class="bg-gray-800 rounded h-4 w-2/3 mb-1"></div>
@@ -100,7 +100,7 @@ export const platformPreviews = {
       <div class="bg-white rounded-lg shadow-sm p-3">
         <div class="bg-purple-100 rounded mb-2 h-16 flex items-center justify-center">
           <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4"></path>
           </svg>
         </div>
         <div class="bg-gray-800 rounded h-4 w-2/3 mb-1"></div>
@@ -171,6 +171,18 @@ export const platformPreviews = {
 
 // Other configuration options can be added here
 export const config = {
+  // Color scheme configuration
+  colors: {
+    primary: '#8B5CF6', // Purple 500
+    secondary: '#6D28D9', // Purple 700
+    accent: '#10B981', // Green 500
+    text: {
+      primary: '#1F2937', // Gray 800
+      secondary: '#4B5563', // Gray 600
+      light: '#9CA3AF' // Gray 400
+    }
+  },
+  
   // Icon definitions
   icons: {
     accessibleScience: `<svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
