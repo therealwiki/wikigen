@@ -1,258 +1,889 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wikigen.me - Coming Soon | Confidential Computing Platform for Research</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script type="importmap">
-  {
-    "imports": {
-      "config": "./config.js"
-    }
-  }
-  </script>
-</head>
-<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-  <header class="bg-white shadow-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <svg width="36" height="36" viewBox="0 0 40 40" class="fill-current text-indigo-600 mr-3">
-          <path d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm0 36c-8.837 0-16-7.163-16-16S11.163 4 20 4s16 7.163 16 16-7.163 16-16 16z"/>
-          <path d="M20 8c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8zm-2 18l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L26 18l-8 8z"/>
-        </svg>
-        <h1 class="text-2xl font-bold text-gray-800">Wikigen.me</h1>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="#about" class="text-indigo-600 hover:text-indigo-800 hidden md:block">About</a>
-        <a href="#contact" class="btn-primary">Stay Informed</a>
-      </div>
-    </div>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Wikigen.me - Secure Collaborative Research | Join Our Waitlist
+        </title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script type="importmap">
+            {
+                "imports": {
+                    "config": "./config.js"
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-white min-h-screen font-['Inter']">
+        <header class="bg-white border-b border-gray-100">
+            <div
+                class="container mx-auto px-4 py-4 flex justify-between items-center"
+            >
+                <div class="flex items-center">
+                    <svg
+                        width="40"
+                        height="40"
+                        viewBox="0 0 40 40"
+                        class="fill-current text-purple-600 mr-3"
+                    >
+                        <path
+                            d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm0 36c-8.837 0-16-7.163-16-16S11.163 4 20 4s16 7.163 16 16-7.163 16-16 16z"
+                        />
+                        <path
+                            d="M20 8c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8zm-2 18l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L26 18l-8 8z"
+                        />
+                    </svg>
+                    <h1 class="text-2xl font-bold text-gray-800">Wikigen.me</h1>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a
+                        href="#about"
+                        class="text-gray-600 hover:text-purple-700 font-medium"
+                        >About</a
+                    >
+                    <a
+                        href="#roadmap"
+                        class="text-gray-600 hover:text-purple-700 font-medium"
+                        >Roadmap</a
+                    >
+                    <a href="#contact" class="btn-primary">Join Waitlist</a>
+                </nav>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+            <div
+                id="mobile-menu"
+                class="md:hidden hidden bg-white border-b border-gray-100"
+            >
+                <div class="container mx-auto px-4 py-3">
+                    <a
+                        href="#about"
+                        class="block py-2 text-gray-600 hover:text-purple-700"
+                        >About</a
+                    >
+                    <a
+                        href="#roadmap"
+                        class="block py-2 text-gray-600 hover:text-purple-700"
+                        >Roadmap</a
+                    >
+                    <a
+                        href="#contact"
+                        class="block py-2 text-purple-700 font-medium"
+                        >Join Waitlist</a
+                    >
+                </div>
+            </div>
+        </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="relative">
-      <div class="container mx-auto px-4 py-16 md:py-24">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded mb-4">Coming Soon</span>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Secure Collaborative Research Through Confidential Computing</h2>
-            <p class="text-xl text-gray-600 mb-8">We're building a privacy-first platform for research data collaboration using cutting-edge confidential computing technology.</p>
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <a href="#contact" class="btn-primary text-center">Join the Waitlist</a>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="absolute -top-6 -left-6 bg-indigo-100 w-full h-full rounded-xl"></div>
-            <div id="animation-container" class="relative bg-white rounded-xl shadow-lg p-6">
-              <!-- Animation will be inserted here by JS -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <main>
+            <!-- Hero Section -->
+            <section
+                class="relative bg-gradient-to-br from-purple-50 to-indigo-50 py-16 md:py-24"
+            >
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-5 gap-12 items-center">
+                        <div class="md:col-span-3">
+                            <span
+                                class="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full mb-4"
+                                >Coming Soon</span
+                            >
+                            <h2
+                                class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+                            >
+                                Secure Collaborative Research Through
+                                Confidential Computing
+                            </h2>
+                            <p
+                                class="text-xl text-gray-600 mb-8 leading-relaxed"
+                            >
+                                We're building a privacy-first platform for
+                                research data collaboration using cutting-edge
+                                confidential computing technology.
+                            </p>
+                            <div
+                                class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+                            >
+                                <a
+                                    href="#contact"
+                                    class="btn-primary text-center"
+                                    >Join the Waitlist</a
+                                >
+                                <a
+                                    href="#about"
+                                    class="btn-secondary text-center"
+                                    >Learn More</a
+                                >
+                            </div>
+                        </div>
+                        <div class="md:col-span-2 relative">
+                            <div
+                                class="absolute -top-6 -left-6 bg-purple-100 w-full h-full rounded-xl"
+                            ></div>
+                            <div
+                                id="animation-container"
+                                class="relative bg-white rounded-xl shadow-lg p-6"
+                            >
+                                <!-- Animation will be inserted here by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- About Section -->
-    <section id="about" class="bg-white py-16">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-4">About Wikigen</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're currently evaluating cutting-edge privacy technologies including Nvidia Confidential Computing to create a new standard in secure research collaboration.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <div class="bg-indigo-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Confidential Computing</h3>
-            <p class="text-gray-600">Ultra-secure hardware-level encryption keeps sensitive research data protected, even during processing.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <div class="bg-green-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Fair Compensation</h3>
-            <p class="text-gray-600">A fair economic model ensures data contributors are properly rewarded for their valuable contributions.</p>
-          </div>
-          <div class="bg-gray-50 p-6 rounded-xl">
-            <div class="bg-purple-100 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Accessible Science</h3>
-            <p class="text-gray-600">Breaking down barriers between researchers and valuable datasets to accelerate discovery.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <!-- About Section -->
+            <section id="about" class="bg-white py-16 md:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <span
+                            class="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full mb-2"
+                            >About Us</span
+                        >
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                            About Wikigen
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            We're currently evaluating cutting-edge privacy
+                            technologies including Nvidia Confidential Computing
+                            to create a new standard in secure research
+                            collaboration.
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <div
+                            class="bg-white border border-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300"
+                        >
+                            <div
+                                class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+                            >
+                                <svg
+                                    class="w-8 h-8 text-indigo-600"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                Confidential Computing
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Ultra-secure hardware-level encryption keeps
+                                sensitive research data protected, even during
+                                processing.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300"
+                        >
+                            <div
+                                class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+                            >
+                                <svg
+                                    class="w-8 h-8 text-green-600"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                Fair Compensation
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                A fair economic model ensures data contributors
+                                are properly rewarded for their valuable
+                                contributions.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300"
+                        >
+                            <div
+                                class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+                            >
+                                <svg
+                                    class="w-8 h-8 text-purple-600"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                                    />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                                Accessible Science
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Breaking down barriers between researchers and
+                                valuable datasets to accelerate discovery.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Call for Datasets -->
-    <section class="py-16 bg-indigo-600 text-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-6">Call for Datasets</h2>
-          <p class="text-xl text-indigo-100 mb-8">We're seeking research datasets for our initial platform testing. If you have valuable research data and are interested in our secure collaborative platform, we want to hear from you.</p>
-          <div class="grid sm:grid-cols-2 gap-6 mb-8">
-            <div class="bg-white bg-opacity-10 p-6 rounded-xl">
-              <h3 class="text-xl font-bold mb-4">What we're looking for:</h3>
-              <ul class="text-left space-y-3">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Research datasets that require privacy protection</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Data with collaboration potential across organizations</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Domains including healthcare, genomics, finance, and more</span>
-                </li>
-              </ul>
-            </div>
-            <div class="bg-white bg-opacity-10 p-6 rounded-xl">
-              <h3 class="text-xl font-bold mb-4">Benefits for early partners:</h3>
-              <ul class="text-left space-y-3">
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Priority access to our platform when launched</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Input on platform features and development</span>
-                </li>
-                <li class="flex items-start">
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Preferred terms for early adopters</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <a href="#contact" class="btn-white">Express Interest</a>
-        </div>
-      </div>
-    </section>
+            <!-- Platform Preview -->
+            <section class="py-16 md:py-24 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <span
+                            class="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full mb-2"
+                            >Sneak Peek</span
+                        >
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                            Platform Preview
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Our platform will feature multiple interfaces
+                            designed to securely facilitate research
+                            collaboration.
+                        </p>
+                    </div>
 
-    <!-- Roadmap -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto">
-          <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Roadmap</h2>
-          
-          <div class="space-y-0">
-            <div class="timeline-item">
-              <div class="timeline-marker timeline-active"></div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Current Phase: Technology Evaluation</h3>
-              <p class="text-gray-600 mb-2">Evaluating Nvidia Confidential Computing and other privacy technologies while establishing partnerships</p>
-              <p class="text-green-600 font-medium">In progress (as of March 18, 2025)</p>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-marker timeline-active"></div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Q1 2025: Early Partnerships</h3>
-              <p class="text-gray-600">Establishing initial partnerships with data providers and researchers</p>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Q2 2025: Alpha Platform</h3>
-              <p class="text-gray-600">Developing and testing core platform functionality with select partners</p>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Q3-Q4 2025: Beta Launch</h3>
-              <p class="text-gray-600">Expanded access with initial research collaborations</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <div class="grid md:grid-cols-4 gap-8 mb-8">
+                        <div class="md:col-span-1">
+                            <div
+                                class="platform-feature active bg-white shadow-sm rounded-lg p-5"
+                                data-feature="research-portal"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <svg
+                                        class="w-6 h-6 text-indigo-600 mr-3"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                        ></path>
+                                    </svg>
+                                    <h3 class="font-bold text-gray-800">
+                                        Research Portal
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600 text-sm">
+                                    Access collaborative research tools and
+                                    connect with other researchers.
+                                </p>
+                            </div>
 
-    <!-- Contact Form -->
-    <section id="contact" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-3xl font-bold text-gray-800 mb-4">Stay Informed</h2>
-          <p class="text-xl text-gray-600 mb-8">Join our waitlist to receive updates and be the first to know when we launch.</p>
-          
-          <form id="email-form" class="email-form">
-            <div class="mb-4">
-              <input type="email" id="email" placeholder="Your email address" required class="email-input">
-            </div>
-            <div class="mb-4">
-              <select id="interest" class="email-input">
-                <option value="" disabled selected>How would you like to participate?</option>
-                <option value="data-provider">I have datasets to contribute</option>
-                <option value="researcher">I'm a researcher interested in the platform</option>
-                <option value="partner">I represent a potential partner organization</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="mb-6">
-              <textarea id="message" rows="3" placeholder="Tell us about your interests or datasets (optional)" class="email-input"></textarea>
-            </div>
-            <button type="submit" class="form-submit">Join Waitlist</button>
-          </form>
-          
-          <p class="text-sm text-gray-500 mt-4">We respect your privacy and will never share your information with third parties.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+                            <div
+                                class="platform-feature bg-white shadow-sm rounded-lg p-5 mt-4"
+                                data-feature="marketplace"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <svg
+                                        class="w-6 h-6 text-green-600 mr-3"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                        ></path>
+                                    </svg>
+                                    <h3 class="font-bold text-gray-800">
+                                        Data Marketplace
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600 text-sm">
+                                    Discover and exchange valuable research
+                                    datasets with secure privacy controls.
+                                </p>
+                            </div>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <div class="flex items-center mb-4">
-            <svg width="30" height="30" viewBox="0 0 40 40" class="fill-current text-indigo-400 mr-2">
-              <path d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm0 36c-8.837 0-16-7.163-16-16S11.163 4 20 4s16 7.163 16 16-7.163 16-16 16z"/>
-              <path d="M20 8c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8zm-2 18l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L26 18l-8 8z"/>
-            </svg>
-            <h3 class="text-xl font-bold">Wikigen.me</h3>
-          </div>
-          <p class="text-gray-400">Building the future of secure research collaboration through confidential computing.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Contact</h4>
-          <ul class="space-y-2">
-            <li><a href="/cdn-cgi/l/email-protection#84edeae2ebc4f3edefede3e1eaaae9e1" class="text-gray-400 hover:text-white transition"><span class="__cf_email__" data-cfemail="167f78707956617f7d7f717378387b73">[email&#160;protected]</span></a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Legal</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400"> 2023 Wikigen.me. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+                            <div
+                                class="platform-feature bg-white shadow-sm rounded-lg p-5 mt-4"
+                                data-feature="ml-environment"
+                            >
+                                <div class="flex items-center mb-3">
+                                    <svg
+                                        class="w-6 h-6 text-blue-600 mr-3"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        ></path>
+                                    </svg>
+                                    <h3 class="font-bold text-gray-800">
+                                        ML Environment
+                                    </h3>
+                                </div>
+                                <p class="text-gray-600 text-sm">
+                                    Run secure machine learning tasks on
+                                    confidential data with hardware-level
+                                    protection.
+                                </p>
+                            </div>
+                        </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="app.js"></script>
-</body>
+                        <div class="md:col-span-3">
+                            <div
+                                class="platform-preview bg-white shadow rounded-lg border border-gray-100 transition-opacity duration-300"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call for Datasets -->
+            <section
+                class="py-16 md:py-24 bg-gradient-to-br from-purple-700 to-indigo-800 text-white"
+            >
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="text-center mb-12">
+                            <span
+                                class="inline-block bg-white bg-opacity-20 text-white text-sm font-medium px-2.5 py-0.5 rounded-full mb-2"
+                                >Collaboration</span
+                            >
+                            <h2 class="text-3xl font-bold mb-4">
+                                Call for Datasets
+                            </h2>
+                            <p
+                                class="text-xl text-purple-100 mb-8 leading-relaxed"
+                            >
+                                We're seeking research datasets for our initial
+                                platform testing. If you have valuable research
+                                data and are interested in our secure
+                                collaborative platform, we want to hear from
+                                you.
+                            </p>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-8 mb-12">
+                            <div
+                                class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-filter backdrop-blur-sm"
+                            >
+                                <h3 class="text-xl font-bold mb-6">
+                                    What we're looking for:
+                                </h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <svg
+                                            class="w-5 h-5 mr-3 flex-shrink-0 mt-1 text-purple-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <span class="leading-relaxed"
+                                            >Research datasets that require
+                                            privacy protection</span
+                                        >
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg
+                                            class="w-5 h-5 mr-3 flex-shrink-0 mt-1 text-purple-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <span class="leading-relaxed"
+                                            >Data with collaboration potential
+                                            across organizations</span
+                                        >
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg
+                                            class="w-5 h-5 mr-3 flex-shrink-0 mt-1 text-purple-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <span class="leading-relaxed"
+                                            >Domains including healthcare,
+                                            genomics, finance, and more</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-filter backdrop-blur-sm"
+                            >
+                                <h3 class="text-xl font-bold mb-6">
+                                    Benefits for early partners:
+                                </h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <svg
+                                            class="w-5 h-5 mr-3 flex-shrink-0 mt-1 text-purple-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <span class="leading-relaxed"
+                                            >Priority access to our platform
+                                            when launched</span
+                                        >
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg
+                                            class="w-5 h-5 mr-3 flex-shrink-0 mt-1 text-purple-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <span class="leading-relaxed"
+                                            >Input on platform features and
+                                            development</span
+                                        >
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg
+                                            class="w-5 h-5 mr-3 flex-shrink-0 mt-1 text-purple-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <span class="leading-relaxed"
+                                            >Preferred terms for early
+                                            adopters</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a
+                                href="#contact"
+                                class="btn-white px-8 py-4 text-lg"
+                                >Express Interest</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap -->
+            <section id="roadmap" class="py-16 md:py-24 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="text-center mb-12">
+                            <span
+                                class="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full mb-2"
+                                >Timeline</span
+                            >
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                                Our Roadmap
+                            </h2>
+                            <p class="text-xl text-gray-600 mb-8">
+                                We're actively working to bring secure
+                                collaborative research to life.
+                            </p>
+                        </div>
+
+                        <div class="space-y-0">
+                            <div class="timeline-item">
+                                <div
+                                    class="timeline-marker timeline-active"
+                                ></div>
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2"
+                                >
+                                    Current Phase: Technology Evaluation
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Evaluating Nvidia Confidential Computing and
+                                    other privacy technologies while
+                                    establishing partnerships
+                                </p>
+                                <p class="text-green-600 font-medium">
+                                    In progress (as of March 18, 2025)
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div
+                                    class="timeline-marker timeline-active"
+                                ></div>
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2"
+                                >
+                                    Q1 2025: Early Partnerships
+                                </h3>
+                                <p class="text-gray-600">
+                                    Establishing initial partnerships with data
+                                    providers and researchers
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2"
+                                >
+                                    Q2 2025: Alpha Platform
+                                </h3>
+                                <p class="text-gray-600">
+                                    Developing and testing core platform
+                                    functionality with select partners
+                                </p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2"
+                                >
+                                    Q3-Q4 2025: Beta Launch
+                                </h3>
+                                <p class="text-gray-600">
+                                    Expanded access with initial research
+                                    collaborations
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section id="contact" class="py-16 md:py-24 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <div>
+                                <span
+                                    class="inline-block bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full mb-2"
+                                    >Join Us</span
+                                >
+                                <h2
+                                    class="text-3xl font-bold text-gray-900 mb-4"
+                                >
+                                    Join Our Waitlist
+                                </h2>
+                                <p
+                                    class="text-xl text-gray-600 mb-6 leading-relaxed"
+                                >
+                                    Be the first to know when we launch and get
+                                    priority access to our platform.
+                                </p>
+
+                                <div
+                                    class="bg-white p-6 rounded-xl shadow-sm mb-8"
+                                >
+                                    <div class="flex items-center mb-4">
+                                        <svg
+                                            class="w-6 h-6 text-purple-600 mr-3"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                            ></path>
+                                        </svg>
+                                        <h3 class="font-bold text-gray-900">
+                                            Privacy Commitment
+                                        </h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-0">
+                                        Your information is protected and never
+                                        shared with third parties. We only use
+                                        your email to send you updates about
+                                        Wikigen.
+                                    </p>
+                                </div>
+
+                                <div class="bg-white p-6 rounded-xl shadow-sm">
+                                    <div class="flex items-center mb-4">
+                                        <svg
+                                            class="w-6 h-6 text-green-600 mr-3"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 13l4 4L19 7"
+                                            ></path>
+                                        </svg>
+                                        <h3 class="font-bold text-gray-900">
+                                            Early Bird Benefits
+                                        </h3>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-0">
+                                        Waitlist members will receive priority
+                                        access, special offers, and early
+                                        opportunities to participate in our
+                                        platform testing.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-white p-8 rounded-xl shadow-sm">
+                                    <form id="email-form" class="email-form">
+                                        <h3
+                                            class="text-xl font-bold text-gray-900 mb-6"
+                                        >
+                                            Stay Informed
+                                        </h3>
+
+                                        <div class="mb-5">
+                                            <label
+                                                for="email"
+                                                class="block text-sm font-medium text-gray-700 mb-1"
+                                                >Email Address *</label
+                                            >
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                placeholder="Your email address"
+                                                required
+                                                class="email-input"
+                                            />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <label
+                                                for="interest"
+                                                class="block text-sm font-medium text-gray-700 mb-1"
+                                                >How would you like to
+                                                participate?</label
+                                            >
+                                            <select
+                                                id="interest"
+                                                class="email-input"
+                                            >
+                                                <option
+                                                    value=""
+                                                    disabled
+                                                    selected
+                                                >
+                                                    Select an option
+                                                </option>
+                                                <option value="data-provider">
+                                                    I have datasets to
+                                                    contribute
+                                                </option>
+                                                <option value="researcher">
+                                                    I'm a researcher interested
+                                                    in the platform
+                                                </option>
+                                                <option value="partner">
+                                                    I represent a potential
+                                                    partner organization
+                                                </option>
+                                                <option value="other">
+                                                    Other
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-6">
+                                            <label
+                                                for="message"
+                                                class="block text-sm font-medium text-gray-700 mb-1"
+                                                >Tell us about your interests or
+                                                datasets (optional)</label
+                                            >
+                                            <textarea
+                                                id="message"
+                                                rows="4"
+                                                placeholder="Your message"
+                                                class="email-input"
+                                            ></textarea>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            class="form-submit"
+                                        >
+                                            Join Waitlist
+                                        </button>
+
+                                        <p
+                                            class="text-sm text-gray-500 mt-4 text-center"
+                                        >
+                                            By joining, you agree to our Privacy
+                                            Policy and Terms of Service
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <svg
+                                width="30"
+                                height="30"
+                                viewBox="0 0 40 40"
+                                class="fill-current text-purple-400 mr-2"
+                            >
+                                <path
+                                    d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm0 36c-8.837 0-16-7.163-16-16S11.163 4 20 4s16 7.163 16 16-7.163 16-16 16z"
+                                />
+                                <path
+                                    d="M20 8c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8zm-2 18l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L26 18l-8 8z"
+                                />
+                            </svg>
+                            <h3 class="text-xl font-bold">Wikigen.me</h3>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed">
+                            Building the future of secure research collaboration
+                            through confidential computing.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="/cdn-cgi/l/email-protection#97fef9f1f8d7e0fefcfef0f2f9b9faf2"
+                                    class="text-gray-400 hover:text-white transition"
+                                    ><span
+                                        class="__cf_email__"
+                                        data-cfemail="b5dcdbd3daf5c2dcdedcd2d0db9bd8d0"
+                                        >[email&#160;protected]</span
+                                    ></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a
+                                    href="/privacy-policy"
+                                    class="text-gray-400 hover:text-white transition"
+                                    >Privacy Policy</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/terms-of-service"
+                                    class="text-gray-400 hover:text-white transition"
+                                    >Terms of Service</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+                >
+                    <p class="text-gray-400">
+                        2025 Wikigen.me. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            data-cfasync="false"
+            src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+        <script type="module" src="app.js"></script>
+    </body>
 </html>
