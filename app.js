@@ -1,5 +1,12 @@
 import { platformPreviews } from './config.js';
 
+// Add this at the top of app.js, below your existing imports
+import { platformPreviews } from './config.js';
+
+// Initialize Supabase client
+const SUPABASE_URL = 'https://nwmovbyahxdjxpxtfbfn.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53bW92YnlhaHhkanhweHRmYmZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzI3MjU1NjcsImV4cCI6MTk4ODMwMTU2N30.EdisJHzoYezc7v7I2jSSNkrfwo_KYCBAcSwoLBR46mQ';
+
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle
   const menuToggle = document.getElementById('menu-toggle');
@@ -243,38 +250,78 @@ function updatePlatformPreview(featureId) {
 }
 
 // Handle form submission
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
   event.preventDefault();
   
   const emailInput = document.getElementById('email');
   const interestSelect = document.getElementById('interest');
   const messageText = document.getElementById('message');
+  const submitButton = document.querySelector('.form-submit');
   
   if (!emailInput.value) return;
   
-  // Here you would normally send this data to your backend
-  // For demonstration, we'll just show a thank you message
-  const formContainer = event.target;
+  // Disable the button and show loading state
+  submitButton.disabled = true;
+  submitButton.textContent = 'Submitting...';
   
-  // Store the form data that would be sent to server
+  // Prepare the form data
   const formData = {
     email: emailInput.value,
-    interest: interestSelect.value,
-    message: messageText.value
+    message: `Interest: ${interestSelect.value || 'Not specified'}\n${messageText.value || ''}`,
+    created_at: new Date().toISOString()
   };
   
-  console.log('Form submission data:', formData);
-  
-  // Replace form with thank you message
-  formContainer.innerHTML = `
-    <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 text-center">
-      <svg class="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-      </svg>
-      <h3 class="text-xl font-bold mb-2">Thank You!</h3>
-      <p>We've added you to our waitlist and will be in touch soon with updates about Wikigen.me.</p>
-    </div>
-  `;
+  try {
+    // Send data to Supabase
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/wikigen write`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    
+    // Replace form with thank you message
+    const formContainer = event.target;
+    formContainer.innerHTML = `
+      <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 text-center">
+        <svg class="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <h3 class="text-xl font-bold mb-2">Thank You!</h3>
+        <p>We've added you to our waitlist and will be in touch soon with updates about Wikigen.me.</p>
+      </div>
+    `;
+    
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    
+    // Show error message
+    const formContainer = event.target;
+    submitButton.disabled = false;
+    submitButton.textContent = 'Join Waitlist';
+    
+    // Add error message at the top of the form
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'bg-red-50 border border-red-200 text-red-800 rounded-lg p-4 mb-4 text-center';
+    errorMessage.innerHTML = `
+      <p>Sorry, there was an error submitting your request. Please try again later.</p>
+    `;
+    
+    formContainer.prepend(errorMessage);
+    
+    // Remove error message after 5 seconds
+    setTimeout(() => {
+      errorMessage.remove();
+    }, 5000);
+  }
 }
 
 function animateCounters() {
